@@ -13,9 +13,10 @@ const handleClick = () => {
         password: password,
     }).then((data) => console.log(data))
     .catch((err) => console.log(err))
-    // API.get('/users').then((data) => console.log(data)).catch((err)=> console.log(err))
-    // console.log(process.env.REACT_API);
-    // console.log("TEs");
+    
+    setFullname("");
+    setEmail("");
+    setPassword("");
 }
     return(
         <div className=" h-screen w-screen">
