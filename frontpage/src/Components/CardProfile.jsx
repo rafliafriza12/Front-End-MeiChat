@@ -3,7 +3,7 @@ import bg from '../Assets/IMG/bg.jpg';
 import API from '../API/API';
 const CardProfile = () => {
     const currentUser = JSON.parse(localStorage.getItem('user'));
-    const [user,setUser] = useState(currentUser.user);
+    const [user,setUser] = useState(currentUser);
     const [isEdit, setIsEdit] = useState(false);
     const [fullName, setFullname] = useState(user.fullName);
     const [email, setEmail] = useState(user.email);
@@ -24,8 +24,8 @@ const CardProfile = () => {
         setIsEdit(false)
     }
     useEffect(() => {
-        console.log(currentUser);
-        console.log(user);
+        console.log("currentUser",currentUser);
+        console.log("user:",user);
     },[]);
 
     return(
